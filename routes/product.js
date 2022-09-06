@@ -81,22 +81,7 @@ router.post("/save", async (req, res) => {
             res.end(JSON.stringify({ status: "failed", data:"something is wrong"}));
         }
     });
-    // router.post("/savevarieties", async(req,res)=>{
-    //     try{
-    //         let body = req.body;
-    //         let product = new Product();
-    //         product = await Product.findById(body.data.id);
-    //         product.varieties.push(body.data.varieties);
-    //         product.save().then(result=>{
-    //             res.send(JSON.stringify({ status:"success",data:result})); 
-    //         }, err=>{
-    //             res.send(JSON.stringify({ status:"failed", data:err})); 
-    //         });
-    //     }
-    //     catch{
-    //         res.end(JSON.stringify({ status: "failed", data:"something is wrong"}));
-    //     }
-    // });
+    
 
     router.post("/savevariety", async(req, res)=>{
         try{
